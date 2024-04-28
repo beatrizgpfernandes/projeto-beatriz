@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    background-color: beige;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
+
+}
+.IndexGeral {
+    flex-direction: column;
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.blocoNavbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #766FA1;
+    width: 100vw;
+    height: 9vh;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 550px;
+    color: #ffffff;
+    font-size: large;
+}
+
+
+.navbar button {
+    height: 23px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+
+}
+
+.fundoI {
+    width: 100vw;
+    height: 91vh;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.fundoIndex{
+    width: 100vw;
+    height: 91vh;
+    background-image: url("https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/52dae4c7-2ab1-4bb9-ab1c-8100fd54e2f9/286804070f049e8da57503f074cc9c9d512963f2.jpg?host=wbd-images.prod-vod.h264.io&partner=beamcom");
+    background-size: cover;
+}
+
+.logoFrase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 91vh;
+    
+}
+
+.logoFrase p {
+    width: 30vw;
+    color: #ffffff;
+    text-align: center;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.sobreMim {
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+}
