@@ -59,43 +59,4 @@ body {
     border: none;
     background-color: #ffffff;
     cursor: pointer;
-
-}
-
-.fundoI {
-    width: 100vw;
-    height: 91vh;
-    background-color: rgba(0, 0, 0, 0.575);
-}
-
-.fundoIndex{
-    width: 100vw;
-    height: 91vh;
-    background-image: url("fundoIndex.avif");
-    background-size: cover;
-}
-
-.logoFrase {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 91vh;
-    
-}
-
-.logoFrase p {
-    width: 30vw;
-    color: #ffffff;
-    text-align: center;
-    font-size: larger;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-}
-
-.sobreMim {
-    height: 100vh;
-    width: 100vw;
-    background-color: beige;
 }
