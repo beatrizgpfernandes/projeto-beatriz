@@ -1,14 +1,15 @@
 body {
     display: flex;
-    background-color: beige;
+    background-color: #FEFDFC;
     flex-direction: column;
     margin: 0%;
     padding: 0%;
-
+    
 }
-.telaGeral {
-    flex-direction: column;
 
+
+.telaGeral {
+    flex-direction: row;
 }
 .container {
     display: flex;
@@ -47,7 +48,7 @@ body {
     align-items: center;
     list-style: none;
     width: 70vw;
-    color: #ffffff;
+    color: #FEFDFC;
     font-size: large;
 }
 
@@ -57,10 +58,17 @@ body {
     width: 120px;
     border-radius: 10px;
     border: none;
-    background-color: #ffffff;
+    background-color: #FEFDFC;
     cursor: pointer;
 }
 
 .agora {
     background-color: #FFDE59;
+}
+
+.corpoPag {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('fundo-CadastroLogin.png');
+    background-size: cover;
 }

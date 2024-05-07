@@ -1,11 +1,26 @@
 body {
     display: flex;
-    background-color: beige;
+    background-color: #FEFDFC;
     flex-direction: column;
     margin: 0%;
     padding: 0%;
+    overflow-x: hidden;
 
 }
+
+body::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #FEFDFC;   
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #C7ADD1;    /* cor do scroll */
+    border-radius: 20px;       /* arredondamento da borda do scroll */
+    border: 3px solid #C7ADD1;  /* cor da borda do scroll */
+  }
 .IndexGeral {
     flex-direction: column;
 
@@ -47,8 +62,8 @@ body {
     align-items: center;
     list-style: none;
     width: 70vw;
-    color: #ffffff;
-    font-size: large;
+    color: #FEFDFC;
+    font-size: larger;
 }
 
 
@@ -57,20 +72,20 @@ body {
     width: 120px;
     border-radius: 10px;
     border: none;
-    background-color: #ffffff;
+    background-color: #FEFDFC;
     cursor: pointer;
 
 }
 
 .fundoI {
     width: 100vw;
-    height: 91vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.575);
 }
 
 .fundoIndex{
     width: 100vw;
-    height: 91vh;
+    height: 100vh;
     background-image: url("fundoIndex.avif");
     background-size: cover;
 }

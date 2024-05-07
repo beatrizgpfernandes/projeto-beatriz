@@ -1,20 +1,23 @@
 body {
     display: flex;
-    background-color: beige;
+    background-color: #FEFDFC;
     flex-direction: column;
     margin: 0%;
     padding: 0%;
+    
 
 }
-.IndexGeral {
+
+.telaGeral {
     flex-direction: column;
 
 }
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .header {
@@ -59,4 +62,34 @@ body {
     border: none;
     background-color: #ffffff;
     cursor: pointer;
+}
+
+
+.corpoCadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('fundoCadastro.png');
+    background-size: cover;}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+    width: 48vw;
+    height: 65vh;
+    background-color: #766FA1;
+    border-radius: 15px;
+}
+
+@font-face {
+    font-family: 'FontFriends';
+    src: url('Gabriel\ Weiss\'\ Friends\ Font.TTF');
+}
+.box h1 {
+    font-family: "FontFriends" ;
+    color: #ffffff;
 }
