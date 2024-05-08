@@ -9,7 +9,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 4px;
+    width: 7px;
   }
   
   body::-webkit-scrollbar-track {
@@ -110,7 +110,7 @@ body::-webkit-scrollbar {
 }
 
 .sobreMim {
-    height: 100vh;
+    height: 91vh;
     width: 100vw;
-    background-color: beige;
+    background-color: purple;
 }

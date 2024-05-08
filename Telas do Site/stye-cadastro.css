@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     margin: 0%;
     padding: 0%;
-    
 
 }
 
@@ -81,8 +80,8 @@ body {
     margin-top: 5%;
     width: 48vw;
     height: 65vh;
-    background-color: #766FA1;
-    border-radius: 15px;
+    background-color: #766fa1da;
+    border-radius: 10px;
 }
 
 @font-face {
@@ -91,5 +90,6 @@ body {
 }
 .box h1 {
     font-family: "FontFriends" ;
-    color: #ffffff;
+    color: #FFDE59;
+    font-size:37px;
 }
