@@ -105,12 +105,79 @@ body::-webkit-scrollbar {
     color: #ffffff;
     text-align: center;
     font-size: larger;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Questrial-Regular';
 
 }
 
 .sobreMim {
+    display: flex;
+    flex-direction: row;
     height: 91vh;
     width: 100vw;
-    background-color: purple;
+    background-color: #FEFDFC;
+}
+
+@font-face {
+    font-family: 'Questrial-Regular';
+    src: url('Questrial-Regular.ttf');
+}
+
+.tituloSM {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55vw;
+    height: 91vh;
+}
+
+.enfeiteSM {
+    width: 50vw;
+    height: 38vh;
+}
+
+.enfeiteSM img {
+    height: 38vh;
+
+}
+
+.imagensSM {
+    width: 45vw;
+    height: 91vh;
+    background-color: rgb(150, 53, 150);
+}
+
+.escritaSM {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    word-spacing: 5px;
+    width: 50vw;
+    height: 50vh;
+}
+
+.escritaSM h1 {
+    font-family: 'Questrial-Regular';
+    color: #766FA1;
+
+}
+.titulo1 {
+    display: flex;
+    flex-direction: row;
+}
+.linha {
+    width: 4px;
+    height: 5vh;
+    margin-left: 15%;
+    margin-top: 3%;
+    margin-right: 3%;
+
+    background-color: #FFDE59;
+}
+
+.escritaSM p {
+    font-family: 'Questrial-Regular';
+    margin-left: 15%;
+    font-size: medium;
+    color: #737373;
+
 }

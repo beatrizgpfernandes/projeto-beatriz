@@ -105,10 +105,24 @@ body {
 }
 
 .box button {
-    background-color: #FEFDFC;
+    background-color: #FFDE59;
     width: 14vw;
     height: 5vh;
-    border-radius: 8px;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    border-radius: 12px;
     color: rgb(0, 0, 0);
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box button:hover {
+    background-color: #ccc9e2;
+}
+
+.box p {
+    color: #FEFDFC;
+    font-family: 'Arial';
+    font-size: 85%;
 }
