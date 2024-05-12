@@ -4,12 +4,26 @@ body {
     flex-direction: column;
     margin: 0%;
     padding: 0%;
-    
+    overflow-x: hidden;
+
 }
 
+body::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #FEFDFC;   
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #C7ADD1;    /* cor do scroll */
+    border-radius: 20px;       /* arredondamento da borda do scroll */
+    border: 3px solid #C7ADD1;  /* cor da borda do scroll */
+  }
+.IndexGeral {
+    flex-direction: column;
 
-.telaGeral {
-    flex-direction: row;
 }
 .container {
     display: flex;
@@ -49,7 +63,15 @@ body {
     list-style: none;
     width: 70vw;
     color: #FEFDFC;
-    font-size: large;
+    font-size: larger;
+}
+
+.navbar li {
+    font-family: 'Questrial-Regular';
+}
+
+.navbar li:hover {
+    color: #FFDE59;
 }
 
 
@@ -60,6 +82,17 @@ body {
     border: none;
     background-color: #FEFDFC;
     cursor: pointer;
+    font-family: 'Questrial-Regular';
+    font-size: medium;
+}
+
+.navbar button:hover {
+    background-color: #FFDE59;
+}
+
+@font-face {
+    font-family: 'Questrial-Regular';
+    src: url('Questrial-Regular.ttf');
 }
 
 .corpoLogin {

@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
 .blocoNavbar img {
     width: 10vw;
     height: 5vh;
-    margin-right: 200px;
+    margin-right: 470px;
 }
 
 .navbar {
@@ -61,13 +61,20 @@ body::-webkit-scrollbar {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    width: 70vw;
+    width: 50vw;
     color: #FEFDFC;
     font-size: larger;
 }
 
 .navbar li {
     font-family: 'Questrial-Regular';
+}
+
+.navbar a{
+    font-family: 'Questrial-Regular';
+    text-decoration: none;
+    color: #FEFDFC;
+    transition: 5s;
 }
 
 .navbar li:hover {
@@ -90,45 +97,8 @@ body::-webkit-scrollbar {
     background-color: #FFDE59;
 }
 
+
 @font-face {
     font-family: 'Questrial-Regular';
     src: url('Questrial-Regular.ttf');
-}
-
-.corpoCadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('fundoCadastro.png');
-    background-size: cover;}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    width: 48vw;
-    height: 65vh;
-    background-color: #766fa1da;
-    border-radius: 10px;
-}
-
-@font-face {
-    font-family: 'FontFriends';
-    src: url('Gabriel\ Weiss\'\ Friends\ Font.TTF');
-}
-.box h1 {
-    font-family: "FontFriends" ;
-    color: #FFDE59;
-    font-size:37px;
-}
-
-.campos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 30vw;
-    height: 20vh;
 }
