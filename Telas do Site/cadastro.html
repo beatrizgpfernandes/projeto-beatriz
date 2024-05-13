@@ -16,11 +16,19 @@
                 <div class="blocoNavbar">
                     <img src="logo.png" alt="">
                     <div class="navbar">
-                        <a href="index.html" style="text-decoration: none; color: #FEFDFC;"><li>Home</li></a>
-                    <li>Sobre Mim</li>
-                    <li>Sobre o Blog</li>
-                    <li>Contato</li>
-                    <li>|</li>
+                        <a href="index.html #Home">
+                            <li>Home</li>
+                        </a>
+                        <a href="index.html #SobreMim">
+                            <li>Sobre Mim</li>
+                        </a>
+                        <a href="index.html #SobreBlog">
+                            <li>Sobre o Blog</li>
+                        </a>
+                        <a href="index.html #Contato">
+                            <li>Contato</li>
+                        </a>
+                        <li>|</li>
                         <button style="background-color: #FFDE59;">CADASTRO</button>
                         <a href="login.html"><button>LOGIN</button></a>
                     </div>
@@ -30,19 +38,24 @@
 
         <div class="corpoCadastro">
             <div class="box">
-                <h1>Cadastre-se</h1>
+                <h1>Cadastre-se</h1> <br>
                 <div class="campos">
-                <div class="boxCad">
-                    <input type="text" id="input_Nome" placeholder="Nome Completo">
-                    <input type="text" id="input_tel" placeholder="Telefone">
-                    <input type="password" id="input_senha" placeholder="Senha">
+                    <div class="boxCad">
+                        <input type="text" id="input_Nome" placeholder="Nome">
+                        <input type="text" id="input_sobrenome" placeholder="Sobrenome">
+                    </div>
+                    
+                    <div class="boxCad">
+                        <input type="date" id="input_dtNasc" placeholder="Nascimento">
+                        <input type="text" id="input_email" placeholder="E-mail">
+                    </div>
+                
+                    <div class="boxCad">
+                        <input type="password" id="input_senha" placeholder="Senha">
+                        <input type="password" id="input_confSenha" placeholder="Confirmar Senha">
+                    </div>
                 </div>
-                <div class="boxCad">
-                    <input type="date" id="input_dtNasc" placeholder="Nascimento">
-                    <input type="text" id="input_email" placeholder="E-mail">
-                    <input type="password" id="input_confSenha" placeholder="Confirmar Senha">
-                </div>
-            </div>
+                <button onclick="cadastra()">CADASTRAR</button>
             </div>
         </div>
     </div>
@@ -50,3 +63,11 @@
 </body>
 
 </html>
+
+<script>
+
+function cadastrar() {
+    
+}
+
+</script>

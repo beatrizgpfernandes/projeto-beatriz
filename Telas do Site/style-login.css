@@ -74,6 +74,13 @@ body::-webkit-scrollbar {
     color: #FFDE59;
 }
 
+.navbar a{
+    font-family: 'Questrial-Regular';
+    text-decoration: none;
+    color: #FEFDFC;
+    transition: 5s;
+}
+
 
 .navbar button {
     height: 23px;

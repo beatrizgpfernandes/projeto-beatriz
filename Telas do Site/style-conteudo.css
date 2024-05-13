@@ -102,3 +102,30 @@ body::-webkit-scrollbar {
     font-family: 'Questrial-Regular';
     src: url('Questrial-Regular.ttf');
 }
+
+.fundoHOME {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FEFDFC;
+}
+
+.identificacao {
+    width: 19vw;
+    height: 100vh;
+    background-color: #766FA1;
+}
+
+.foto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 19vw;
+    height: 30vh;
+    background-color: #FFDE59;
+}
+
+.foto img {
+    width: 5vw;
+    height: 10vh;
+}

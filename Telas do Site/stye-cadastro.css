@@ -74,6 +74,13 @@ body::-webkit-scrollbar {
     color: #FFDE59;
 }
 
+.navbar a{
+    font-family: 'Questrial-Regular';
+    text-decoration: none;
+    color: #FEFDFC;
+    transition: 5s;
+}
+
 
 .navbar button {
     height: 23px;
@@ -109,7 +116,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
-    width: 48vw;
+    width: 45vw;
     height: 65vh;
     background-color: #766fa1da;
     border-radius: 10px;
@@ -127,8 +134,43 @@ body::-webkit-scrollbar {
 
 .campos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    width: 30vw;
-    height: 20vh;
+    width: 48vw;
+    height: 25vh;
+
 }
+
+.campos .boxCad {
+    display: flex;
+    justify-content: space-around;
+    width: 42vw;
+    height: 8vh;
+}
+.boxCad input {
+    background-color: #FEFDFC;
+    width: 18vw;
+    height: 5vh;
+    border-radius: 8px;
+    border: none;
+    color: rgb(0, 0, 0);
+
+}
+
+.box button {
+    background-color: #FFDE59;
+    width: 16vw;
+    height: 6vh;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box button:hover {
+    background-color: #ccc9e2;
+}
+

@@ -229,20 +229,125 @@ body::-webkit-scrollbar {
 .sobreBlog {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 95vh;
     width: 100vw;
     background-color: #eee9f0;
 }
 
-.textoSB {
-    width: 60vw;
+.imgsSB {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45vw;
     height: 100vh;
+}
+
+.img1 {
+
+    height: 50vh;
+    width: 45vw;
+    margin-top: 15%;
+    margin-left: 15%;
 
 }
 
-.imgsSB {
-    width: 40vw;
+.img1 img {
+    width: 17vw;
+}
+
+.linhaSB {
+    width: 3vw;
+    height: 10vh;
+    background-color: #FFDE59;
+}
+
+.img2 {
+    height: 50vh;
+    width: 55vw; 
+    margin-bottom: 15%;
+    margin-left: 35%;
+}
+
+.img2 img {
+    border-radius: 12px;
+    width: 28vw;
+    margin-bottom: 7%;
+
+}
+
+.tituloSB {
+    display: flex;
+    justify-content: flex-end;
+    width: 55vw;
+    height: 20vh;
+}
+
+.fundoSB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+    height: 7vh;
+    border-radius: 25px;
+    font-family: 'Questrial-Regular';
+    color: #766FA1;
+    font-size: x-large;
+    margin-top: 10%;
+    margin-right: 10%;
+}
+
+.fundoSB .linha {
+    height: 7vh;
+    margin-left: 5%;
+}
+
+.textoSB {
+    width: 55vw;
     height: 100vh;
+}
+
+.escritaSB {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    word-spacing: 5px;
+    width: 50vw;
+    height: 44vh;
+}
+
+.escritaSB p {
+    font-family: 'Questrial-Regular';
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: large;
+    color: #737373;
+    text-align: right;
+}
+
+.botaoSB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    height: 8vh;
+}
+
+.botaoSB button {
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    border: none;
+    background-color: #766FA1;
+    cursor: pointer;
+    font-family: 'Questrial-Regular';
+    font-size: medium;
+    color: #FEFDFC;
+    margin-top: 7%;
+}
+
+.botaoSB button:hover {
+    background-color: #FFDE59;
 }
 
 .footer {
@@ -252,7 +357,6 @@ body::-webkit-scrollbar {
     height: 10vh;
     width: 100vw;
     background-color: #766FA1;
-    /* border-top: 5px solid #FEFDFC; */
 
 }
 
@@ -306,5 +410,4 @@ body::-webkit-scrollbar {
     color: #FEFDFC;
     font-family: 'Questrial-Regular';
     font-size: small;
-
 }
