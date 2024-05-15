@@ -179,15 +179,10 @@ body::-webkit-scrollbar {
 .icone2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 45vw;
     height: 50vh;
 
-}
-
-.icone2 img {
-    margin-top: 5%;
-    margin-left: 10%;
 }
 
 .escritaSM {
@@ -197,7 +192,7 @@ body::-webkit-scrollbar {
     word-spacing: 5px;
     width: 50vw;
     height: 50vh;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .escritaSM h1 {
@@ -229,50 +224,29 @@ body::-webkit-scrollbar {
 .sobreBlog {
     display: flex;
     flex-direction: row;
-    height: 95vh;
+    height: 80vh;
     width: 100vw;
-    background-color: #eee9f0;
+    background-color: #EEE9F0;
 }
 
 .imgsSB {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     width: 45vw;
-    height: 100vh;
-}
-
-.img1 {
-
-    height: 50vh;
-    width: 45vw;
-    margin-top: 15%;
-    margin-left: 15%;
+    height: 80vh;
 
 }
 
-.img1 img {
-    width: 17vw;
+.imgsSB img {
+    width: 33vw;
+    height: 67vh;
 }
 
 .linhaSB {
     width: 3vw;
     height: 10vh;
     background-color: #FFDE59;
-}
-
-.img2 {
-    height: 50vh;
-    width: 55vw; 
-    margin-bottom: 15%;
-    margin-left: 35%;
-}
-
-.img2 img {
-    border-radius: 12px;
-    width: 28vw;
-    margin-bottom: 7%;
-
 }
 
 .tituloSB {
@@ -350,6 +324,69 @@ body::-webkit-scrollbar {
     background-color: #FFDE59;
 }
 
+.maisSB {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    background-color: #FEFDFC;
+}
+
+.maisSB .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60vh;
+    width: 90vw;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 68vh;
+    width: 23vw;
+    background-color: #EEE9F0;
+    border: 2px solid #C7ADD1;
+    border-radius: 30px;
+}
+
+.box .boxInterno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26vh;
+    width: 23vw;
+    border-radius: 30px;
+
+}
+
+.boxEscrita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 34vh;
+    width: 23vw;
+    font-family: "Questrial-Regular";
+
+}
+
+.boxEscrita h3 {
+    color: #766FA1;
+    font-size: larger;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.boxEscrita p {
+    color: #585858;
+    font-size: medium;
+    text-align: center;
+    padding-left: 7%;
+    padding-right: 7%;
+    letter-spacing: 1px;
+}
 .footer {
     display: flex;
     flex-direction: row;

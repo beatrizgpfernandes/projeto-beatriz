@@ -103,29 +103,22 @@ body::-webkit-scrollbar {
     src: url('Questrial-Regular.ttf');
 }
 
-.fundoHOME {
+.fundoI {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.fundoIndex{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://i.pinimg.com/originals/b6/a4/66/b6a4663baf2f3f13e11ec80178e2d790.webp");
+    background-size: cover;
+}
+
+
+.historia {
     width: 100vw;
     height: 100vh;
     background-color: #FEFDFC;
-}
-
-.identificacao {
-    width: 19vw;
-    height: 100vh;
-    background-color: #766FA1;
-}
-
-.foto{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 19vw;
-    height: 30vh;
-    background-color: #FFDE59;
-}
-
-.foto img {
-    width: 5vw;
-    height: 10vh;
 }
