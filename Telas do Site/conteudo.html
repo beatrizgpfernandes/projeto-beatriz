@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conteúdo</title>
     <link rel="stylesheet" href="style-conteudo.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+  </script>
+
 </head>
 <body>
     <div class="IndexGeral">
@@ -15,11 +22,11 @@
                     <div class="navbar">
                         <a href="#Home"><li>Home</li></a>
                         <a href="#Historia"><li>História</li></a>
-                        <a href="#SobreBlog"><li>Personagens</li></a>
                         <li>|</li>
                         <a href="#Contato"><li>Curiosidades</li></a>
                         <a href="#Contato"><li>Quiz</li></a>
                     </div>
+                    <div class="usuario"></div>
                 </div>
             </div>
         </div>
@@ -30,6 +37,48 @@
         </div>
     </div>
 
-    <div class="historia" id="Historia"></div>
+    <div class="historia" id="Historia">
+        <div class="boxHistoria">
+            <div class="titulo">
+                <div class="bolinha"></div>
+                <h2>Historia</h2>
+            </div>
+        </div>
+    </div>
+    <div class="curiosidades" id="Curiosidades">
+        <h1>Personagens</h1>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box-swiperP">
+                        <div class="fotoP1"></div>
+                    </div>
+                  </div>
+              <div class="swiper-slide">
+                <div class="box-swiper1">
+                    <div class="fotoP"></div>
+                    <div class="descricao">
+                        <h2>Rachel Green</h2>
+
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+
+            </div>
+          </div>
+          <script>
+            const swiper = new Swiper('.swiper', {
+                effect: 'coverflow',
+            cardsEffect: {
+  },
+});
+          </script>
+         
+    </div>
+    <div class="quiz" id="Quiz"></div>
 </body>
 </html>
+
