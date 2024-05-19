@@ -1,3 +1,8 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     background-color: #FEFDFC;
@@ -106,7 +111,7 @@ body::-webkit-scrollbar {
 .fundoIndex{
     width: 100vw;
     height: 100vh;
-    background-image: url("fundoIndex.avif");
+    background-image: url("../assets/imgs/fundoIndex.avif");
     background-size: cover;
 }
 
@@ -141,7 +146,7 @@ body::-webkit-scrollbar {
 
 @font-face {
     font-family: 'Questrial-Regular';
-    src: url('Questrial-Regular.ttf');
+    src: url('../assets/imgs/Questrial-Regular.ttf');
 }
 
 .tituloSM {
