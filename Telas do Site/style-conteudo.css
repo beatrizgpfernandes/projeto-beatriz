@@ -38,8 +38,8 @@ body::-webkit-scrollbar {
 .boxUsuario .nomeUsuario {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 20vh;
+    align-items: flex-end;
+    height: 30vh;
     width: 17vw;
     color: #EEE9F0;
     font-family: 'Questrial-Regular';
@@ -67,6 +67,49 @@ body::-webkit-scrollbar {
     margin-right: 3%;
 }
 
+.metricas {
+    display: flex;
+    flex-direction: column;
+    height: 91vh;
+    width: 83vw;
+}
+
+.metricas .metricasGeral {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 51vh;
+    width: 83vw;
+}
+
+.metricasGeral .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 36vh;
+    width: 25vw;
+    background-color: #EEE9F0;
+    border: 4px solid #766FA1;
+    border-radius: 30px;
+}
+
+
+
+.metricas .ranking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 83vw;
+}
+
+.ranking .boxRanking {
+    height: 35vh;
+    width: 58vw;
+    background-color: #C7ADD1;
+}
 
 
 @font-face {

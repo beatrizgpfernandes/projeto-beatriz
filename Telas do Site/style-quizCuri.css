@@ -87,12 +87,6 @@ body::-webkit-scrollbar {
     font-family: "FontFriends" ;
 }
 
-.quiz {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('fundoQuiz.png');
-    background-size: cover;
-}
 
 
 .swiper {
@@ -160,4 +154,35 @@ body::-webkit-scrollbar {
     margin-top: 1%;
     border-radius: 10px;
 
+}
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('fundoQuiz.png');
+    background-size: cover;
+}
+
+.boxQuiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+    height: 80vh;
+    background-color: #EEE9F0;
+    border-radius: 20px;
+}
+
+.boxQuiz .conteudoGeral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    height: 65vh;
+    background-color: #766FA1;
 }

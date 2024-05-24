@@ -47,6 +47,84 @@
         </script>
 
     </div>
-    <div class="quiz" id="Quiz"></div>
+    <div class="quiz" id="Quiz">
+        <div class="boxQuiz">
+            <h2>Quiz sobre Friends</h2>
+            <div>
+                <div class="pergunta" id="pergunta1">
+                    <h4>Em que ano a série foi lançada?</h4>
+                    <input type="radio" name="perg1" id="correta1">1994
+                    <input type="radio" name="perg1">2001
+                    <input type="radio" name="perg1">1996
+                    <input type="radio" name="perg1">1998
+                </div>
+                <div class="pergunta" id="pergunta2">
+                    <h4>Com quem Rachel se casa em Las Vegas?</h4>
+                    <input type="radio" name="perg2">Monica Geller <br>
+                    <input type="radio" name="perg2">Chandler Bing <br>
+                    <input type="radio" name="perg2">Joey Tribbiani <br>
+                    <input type="radio" name="perg2" id="correta2">Ross Geller <br>
+
+                </div>
+                
+                <div class="pergunta" id="pergunta3">
+                    <h4> Por que o Ross e a Carol se separaram?</h4>
+                    <input type="radio" name="perg3">I KNOW! <br>
+                    <input type="radio" name="perg3">OH MY GOD! <br>
+                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
+                    <input type="radio" name="perg3">How are you doing? <br>
+                </div>
+                <div class="pergunta" id="pergunta4">
+                    <h4>Qual é a famosa frase dita por Joey?</h4>
+                    <input type="radio" name="perg3">Porque Ross gostava da Rachel <br>
+                    <input type="radio" name="perg3">Porque eles brigaram<br>
+                    <input type="radio" name="perg3" >Porque o Ross a traiu<br>
+                    <input type="radio" name="perg3" id="correta4">Porque ela era lésbica<br>
+                </div>
+                <div class="pergunta" id="pergunta5">
+                    <h4>Qual é o nome da namorada que Ross conheceu na China?</h4>
+                    <input type="radio" name="perg3">I KNOW! <br>
+                    <input type="radio" name="perg3">OH MY GOD! <br>
+                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
+                    <input type="radio" name="perg3">How are you doing? <br>
+                </div>
+                <div class="pergunta" id="pergunta3">
+                    <h4>Qual é a famosa frase dita por Joey?</h4>
+                    <input type="radio" name="perg3">I KNOW! <br>
+                    <input type="radio" name="perg3">OH MY GOD! <br>
+                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
+                    <input type="radio" name="perg3">How are you doing? <br>
+                </div>
+                <div class="pergunta" id="pergunta3">
+                    <h4>Qual é a famosa frase dita por Joey?</h4>
+                    <input type="radio" name="perg3">I KNOW! <br>
+                    <input type="radio" name="perg3">OH MY GOD! <br>
+                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
+                    <input type="radio" name="perg3">How are you doing? <br>
+                </div>
+                <button onclick="resultado()">Finalizar</button>
+            </div>
+
+            <div id="div_mensagem"></div>
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+function resultado() { 
+    var pontuacao = 0;
+
+    if (document.getElementById('correta1').checked) {
+        pontuacao++;
+    }
+    if (document.getElementById('correta2').checked) {
+        pontuacao++;
+    }
+    if (document.getElementById('correta3').checked) {
+        pontuacao++;
+    }
+
+    alert(`Sua pontuação é: ${pontuacao}`);
+}
+</script>
