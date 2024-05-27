@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ptbr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,537 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
+
 <body>
+
+    <div class="header">
+        <div class="container">
+            <div class="blocoNavbar">
+                <img src="logo.png" alt="">
+                <div class="navbar">
+                    <a href="#Quiz">
+                        <li>Quiz</li>
+                    </a>
+                    <a href="#Curiosidades">
+                        <li>Curiosidades</li>
+                    </a>
+                    <li>|</li>
+                    <a href="#SobreBlog">
+                        <li>Dashboard</li>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="quiz" id="Quiz">
+        <div class="divInformacoes" id="informacoes">
+            <h2>Quiz sobre Friends</h2>
+            <div class="infos">
+                <p>Esse Quiz foi criado para testar seus conhecimentos sobre o Sitcom mais famoso do mundo.</p>
+                <button onclick="comecar()">COMEÇAR</button>
+            </div>
+        </div>
+        <div>
+            <div id="P1">
+                <div class="pergunta" id="pergunta1">
+                    <div class="tituloPerg">
+                        <h4>Em que ano a série foi lançada?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg1" id="correta1">
+                                <p>1994</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg1" id="correta1">
+                                <p>2001</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg1">
+                                <p>1996</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg1">
+                                <p>1998</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox1()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P2">
+                <div class="pergunta" id="pergunta2">
+                    <div class="tituloPerg">
+                        <h4>Com quem Rachel se casa em Las Vegas?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg2">
+                                <p>Monica Geller</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg2">
+                                <p>Chandler Bing</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg2">
+                                <p>Joey Tribbiani</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg2" id="correta2">
+                                <p>Ross Geller</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox2()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P3">
+                <div class="pergunta" id="pergunta3">
+                    <div class="tituloPerg">
+                        <h4>Qual é a famosa frase dita por Joey?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg3">
+                                <p>I KNOW!</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg3">
+                                <p>OH MY GOD!</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg3" id="correta3">
+                                <p>How you doing?</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg3">
+                                <p>How are you doing?</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox3()">Próxima</button>
+                </div>
+            </div>
+
+
+            <div id="P4">
+                <div class="pergunta" id="pergunta4">
+                    <div class="tituloPerg">
+                        <h4> Por que o Ross e a Carol se separaram?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg4">
+                                <p>Porque Ross gostava da Rachel</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg4">
+                                <p>Porque eles brigaram</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg4">
+                                <p>Porque o Ross a traiu</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg4" id="correta4">
+                                <p>Porque ela era lésbica</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox4()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P5">
+                <div class="pergunta" id="pergunta5">
+                    <div class="tituloPerg">
+                        <h4>Qual é o nome da namorada que Ross conheceu na China?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="peg5">
+                                <p>Emily</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="peg5">
+                                <p>Susie</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="peg5">
+                                <p>Julia</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="peg5" id="correta5">
+                                <p>Julie</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox5()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P6">
+                <div class="pergunta" id="pergunta6">
+                    <div class="tituloPerg">
+                        <h4> Quais são os nomes dos filhos da Monica e do Chandler?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg6">
+                                <p>Ben e Emma</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg6">
+                                <p>Jack e Emma</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg6" id="correta6">
+                                <p>Jack e Erica</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg6">
+                                <p>Joey e Ben </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox6()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P7">
+                <div class="pergunta" id="pergunta7">
+                    <div class="tituloPerg">
+                        <h4>Qual é o nome completo da Rachel?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg7">
+                                <p>Rachel Green</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg7" id="correta7">
+                                <p>Rachel Karen Green</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg7">
+                                <p>Rachel Geller Green</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg7">
+                                <p>Rachel Carol Green</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox7()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P8">
+                <div class="pergunta" id="pergunta8">
+                    <div class="tituloPerg">
+                        <h4>Em qual temporada Monica e Chandler ficaram juntos pela primeira
+                            vez?</h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg8">
+                                <p>3ª</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg8">
+                                <p>4ª</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg8" id="correta8"><br>
+                                <p>5ª</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg8">
+                                <p>6ª </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox8()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P9">
+                <div class="pergunta" id="pergunta9">
+                    <div class="tituloPerg">
+                        <h4>Que parente da Monica e do Ross morreu duas vezes?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg9">
+                                <p>Tio</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg9">
+                                <p>Mãe</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg9"><br>
+                                <p>Avô</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg9" id="correta9">
+                                <p>Avó </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox9()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P10">
+                <div class="pergunta" id="pergunta10">
+                    <div class="tituloPerg">
+                        <h4> Qual é o nome da modelo que fica presa com Chandler durante o
+                            episódio do blackout?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg10">
+                                <p>Jennifer Aniston</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg10">
+                                <p>Gisele Bundchen</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg10" id="correta10">
+                                <p>Jill Goodacre</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg10">
+                                <p>Isabella Guareschi </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox10()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P11">
+                <div class="pergunta" id="pergunta11">
+                    <div class="tituloPerg">
+                        <h4> Qual dos personagens abaixo disse a seguinte frase: “Eles não sabem
+                            que a gente sabe que
+                            eles
+                            sabem que a gente sabe”?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg11">
+                                <p>Monica Geller </p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg11" id="correta11">
+                                <p>Phoebe Buffay</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg11">
+                                <p>Rachel Green</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg11">
+                                <p>Joey Tribianni </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox11()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P12">
+                <div class="pergunta" id="pergunta12">
+                    <div class="tituloPerg">
+                        <h4>Antes do nome oficial “Friends”, qual seria o nome da série?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg12">
+                                <p>Six Friends</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg12">
+                                <p>Friends Forever</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg12" id="correta12">
+                                <p>Insomnia Cafe</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg12">
+                                <p>Cafe Insomnia</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox12()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P13">
+                <div class="pergunta" id="pergunta13">
+                    <div class="tituloPerg">
+                        <h4>Quantas vezes Ross se divorciou ao longo da série?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg13" id="correta13">
+                                <p>3</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg13">
+                                <p>2</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg13">
+                                <p>4</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg13">
+                                <p>1</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox13()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P14">
+                <div class="pergunta" id="pergunta14">
+                    <div class="tituloPerg">
+                        <h4>Para qual cidade Rachel iria viajar em sua lua de mel?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg14">
+                                <p>Santorini</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg14">
+                                <p>Punta Cana</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg14">
+                                <p>Caribe</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg14" id="correta14">
+                                <p>Aruba</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="prox14()">Próxima</button>
+                </div>
+            </div>
+
+            <div id="P15">
+                <div class="pergunta" id="pergunta15">
+                    <div class="tituloPerg">
+                        <h4> No episódio piloto, qual é o primeiro personagem que fala alguma
+                            coisa?
+                        </h4>
+                    </div>
+                    <div class="opcoes">
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg15" id="correta15">
+                                <p>Monica Geller</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg15">
+                                <p>Chandler Bing</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxOp">
+                                <input type="radio" name="perg15">
+                                <p>Rachel Green</p>
+                            </div>
+                            <div class="boxOp">
+                                <input type="radio" name="perg15">
+                                <p>Gunther</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button onclick="resultado()" id="fim" style="justify-content: center; align-items: center;">Finalizar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="curiosidades" id="Curiosidades">
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script type="module">
@@ -46,85 +577,365 @@
             });
         </script>
 
-    </div>
-    <div class="quiz" id="Quiz">
-        <div class="boxQuiz">
-            <h2>Quiz sobre Friends</h2>
-            <div>
-                <div class="pergunta" id="pergunta1">
-                    <h4>Em que ano a série foi lançada?</h4>
-                    <input type="radio" name="perg1" id="correta1">1994
-                    <input type="radio" name="perg1">2001
-                    <input type="radio" name="perg1">1996
-                    <input type="radio" name="perg1">1998
-                </div>
-                <div class="pergunta" id="pergunta2">
-                    <h4>Com quem Rachel se casa em Las Vegas?</h4>
-                    <input type="radio" name="perg2">Monica Geller <br>
-                    <input type="radio" name="perg2">Chandler Bing <br>
-                    <input type="radio" name="perg2">Joey Tribbiani <br>
-                    <input type="radio" name="perg2" id="correta2">Ross Geller <br>
-
-                </div>
-                
-                <div class="pergunta" id="pergunta3">
-                    <h4> Por que o Ross e a Carol se separaram?</h4>
-                    <input type="radio" name="perg3">I KNOW! <br>
-                    <input type="radio" name="perg3">OH MY GOD! <br>
-                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
-                    <input type="radio" name="perg3">How are you doing? <br>
-                </div>
-                <div class="pergunta" id="pergunta4">
-                    <h4>Qual é a famosa frase dita por Joey?</h4>
-                    <input type="radio" name="perg3">Porque Ross gostava da Rachel <br>
-                    <input type="radio" name="perg3">Porque eles brigaram<br>
-                    <input type="radio" name="perg3" >Porque o Ross a traiu<br>
-                    <input type="radio" name="perg3" id="correta4">Porque ela era lésbica<br>
-                </div>
-                <div class="pergunta" id="pergunta5">
-                    <h4>Qual é o nome da namorada que Ross conheceu na China?</h4>
-                    <input type="radio" name="perg3">I KNOW! <br>
-                    <input type="radio" name="perg3">OH MY GOD! <br>
-                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
-                    <input type="radio" name="perg3">How are you doing? <br>
-                </div>
-                <div class="pergunta" id="pergunta3">
-                    <h4>Qual é a famosa frase dita por Joey?</h4>
-                    <input type="radio" name="perg3">I KNOW! <br>
-                    <input type="radio" name="perg3">OH MY GOD! <br>
-                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
-                    <input type="radio" name="perg3">How are you doing? <br>
-                </div>
-                <div class="pergunta" id="pergunta3">
-                    <h4>Qual é a famosa frase dita por Joey?</h4>
-                    <input type="radio" name="perg3">I KNOW! <br>
-                    <input type="radio" name="perg3">OH MY GOD! <br>
-                    <input type="radio" name="perg3" id="correta3">How you doing? <br>
-                    <input type="radio" name="perg3">How are you doing? <br>
-                </div>
-                <button onclick="resultado()">Finalizar</button>
-            </div>
-
-            <div id="div_mensagem"></div>
-        </div>
-    </div>
 </body>
+
 </html>
 
 <script>
-function resultado() { 
-    var pontuacao = 0;
 
-    if (document.getElementById('correta1').checked) {
-        pontuacao++;
-    }
-    if (document.getElementById('correta2').checked) {
-        pontuacao++;
-    }
-    if (document.getElementById('correta3').checked) {
-        pontuacao++;
+    informacoes.style.display = 'flex'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+
+    function comecar() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'flex';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
     }
 
-    alert(`Sua pontuação é: ${pontuacao}`);
-}
+    function prox1() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'flex';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox2() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'flex';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox3() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'flex';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox4() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'flex';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox5() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'flex';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox6() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'flex';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox7() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'flex';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox8() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'flex';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox9() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'flex';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox10() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'flex';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox11() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'flex';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox12() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'flex';
+    P14.style.display = 'none';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox13() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'flex';
+    P15.style.display = 'none';
+    fim.style.display = 'none';
+    }
+
+    function prox14() {
+    informacoes.style.display = 'none'
+    P1.style.display = 'none';
+    P2.style.display = 'none';
+    P3.style.display = 'none';
+    P4.style.display = 'none';
+    P5.style.display = 'none';
+    P6.style.display = 'none';
+    P7.style.display = 'none';
+    P8.style.display = 'none';
+    P9.style.display = 'none';
+    P10.style.display = 'none';
+    P11.style.display = 'none';
+    P12.style.display = 'none';
+    P13.style.display = 'none';
+    P14.style.display = 'none';
+    P15.style.display = 'flex';
+    fim.style.display = 'flex';
+    }
+
+    function resultado() {
+        var pontuacao = 0;
+
+        if (document.getElementById('correta1').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta2').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta3').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta4').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta5').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta6').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta7').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta8').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta9').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta10').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta11').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta12').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta13').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta14').checked) {
+            pontuacao++;
+        } if (document.getElementById('correta15').checked) {
+            pontuacao++;
+        }
+
+        alert(`Sua pontuação é: ${pontuacao}`);
+    }
 </script>

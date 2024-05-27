@@ -6,6 +6,9 @@ body {
     overflow-x: hidden;
 
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body::-webkit-scrollbar {
     width: 7px;
@@ -20,6 +23,82 @@ body::-webkit-scrollbar {
     border-radius: 20px;       /* arredondamento da borda do scroll */
     border: 3px solid #C7ADD1;  /* cor da borda do scroll */
   }
+.IndexGeral {
+    flex-direction: column;
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: fixed;
+
+
+}
+
+.blocoNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #766FA1;
+    width: 100vw;
+    height: 9vh;
+}
+
+.blocoNavbar img {
+    width: 10vw;
+    height: 5vh;
+    margin-right: 600px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 40vw;
+    color: #FEFDFC;
+    font-size: larger;
+}
+
+.navbar li {
+    font-family: 'Questrial-Regular';
+}
+
+.navbar a{
+    font-family: 'Questrial-Regular';
+    text-decoration: none;
+    color: #FEFDFC;
+    transition: 5s;
+}
+
+.navbar li:hover {
+    color: #FFDE59;
+}
+
+
+.navbar button {
+    height: 23px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FEFDFC;
+    cursor: pointer;
+    font-family: 'Questrial-Regular';
+    font-size: medium;
+}
+
+.navbar button:hover {
+    background-color: #FFDE59;
+}
+
 @font-face {
     font-family: 'Questrial-Regular';
     src: url('Questrial-Regular.ttf');
@@ -156,17 +235,40 @@ body::-webkit-scrollbar {
 
 }
 
+.divInformacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vw;
+    height: 70vh;
+    background-color: #C7ADD1;
+    border-radius: 20px;
+}
+
+.divInformacoes h2 {
+    color: #FEFDFC;
+    font-family: 'Questrial-Regular';
+}
+
+.divInformacoes .infos {
+    width: 55vw;
+    height: 55vh;
+    background-color: #766FA1;
+    text-align: center;
+}
+
 .quiz {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url('fundoQuiz.png');
+    background-image: url('');
     background-size: cover;
 }
 
-.boxQuiz {
+/* .boxQuiz {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,9 +282,85 @@ body::-webkit-scrollbar {
 .boxQuiz .conteudoGeral {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     width: 55vw;
     height: 65vh;
     background-color: #766FA1;
+} */
+
+.pergunta {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    height: 76vh;
+    background-color: #766FA1;
+    margin-top: 5%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pergunta .tituloPerg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+    height: 25vh;
+    color: #EEE9F0;
+    font-family: 'Questrial-Regular';
+    font-size: 38px;
+    text-align: center;
+}
+
+.tituloPerg h4{
+    padding: 5%;
+}
+
+.pergunta .opcoes {
+    display: flex;
+    flex-direction: row;
+    width: 65vw;
+    height: 40vh;
+}
+
+.opcoes .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 32.5vw;
+    height: 36vh;
+}
+
+.boxOp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 26vw;
+    height: 8vh;
+    background-color: #EEE9F0;
+    border-radius: 50px;
+}
+
+.boxOp input, p {
+    margin-left: 9%;
+    margin-right: 9%;
+    color: #766FA1;
+    font-size: x-large;
+    font-family: 'Questrial-Regular';
+}
+
+.pergunta button {
+    width: 15vw;
+    height: 6vh;
+    background-color: #FFDE59;
+    border: none;
+    border-radius: 20px;
+    font-size: larger;
+    margin-bottom: 5%;
+}
+
+.pergunta button:hover {
+    background-color: #C7ADD1;
 }
