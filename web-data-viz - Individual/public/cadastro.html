@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BloGuimarães | Cadastro</title>
+  <link rel="shortcut icon" href="../assets/icon/icon-Pag.png" type="image/x-icon">
+
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="./css/stye-cadastro.css" />
+  <link rel="icon" href="./assets/imgs/logo.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+
+<body onload="listar()">
+  <!--header inicio-->
+  <div class="telaGeral">
+    <div class="header">
+      <div class="container">
+        <div class="blocoNavbar">
+          <img src="assets/imgs/logo.png" alt="">
+          <div class="navbar">
+            <a href="./index.html">
+              <li>Home</li>
+            </a>
+            <a href="./index.html">
+              <li>Sobre Mim</li>
+            </a>
+            <a href="./index.html">
+              <li>Sobre o Blog</li>
+            </a>
+            <a href="./index.html">
+              <li>A Série</li>
+            </a>
+            <li>|</li>
+            <button style="background-color: #FFDE59;">CADASTRO</button>
+            <a href="login.html"><button>LOGIN</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--header fim-->
+
+
+    <div class="corpoCadastro">
+      <div class="box">
+        <h1>Cadastre-se</h1> <br>
+        <div class="campos">
+          <div class="boxCad">
+            <input type="text" id="input_nome" placeholder="Nome">
+            <select name="empresas" id="listaPersonagens">
+              <option selected>Selecione um personagem</option>
+            </select>
+          </div>
+
+          <div class="boxCad">
+            <input type="date" id="input_dtNasc" placeholder="Nascimento">
+            <input type="text" id="input_email" placeholder="E-mail">
+          </div>
+
+          <div class="boxCad">
+            <input type="password" id="input_senha" placeholder="Senha">
+            <input type="password" id="input_confSenha" placeholder="Confirmar Senha">
+          </div>
+        </div>
+        <button class="botao" onclick="cadastrar()">CADASTRAR</button>
+        <div class="alerta_erro">
+          <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+          </div>
+        </div>
+        <div id="div_aguardar" class="loading-div">
+          <img src="./assets/icon/autopoint-loading-svg.gif" id="loading-gif">
+        </div>
+      </div>
+
+
+      <div id="div_erros_login"></div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  function cadastrar() {
+    aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = input_nome.value;
+    var dtNascVar = input_dtNasc.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_senha.value;
+    var confirmacaoSenhaVar = input_confSenha.value;
+    var personagemVar = listaPersonagens.value
+
+    if (
+      nomeVar == "" ||
+      dtNascVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == "" ||
+      personagemVar == ""
+    ) {
+
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Todos os campos devem estar preenchidos";
+      finalizarAguardar();
+      return false;
+
+      var tamanhoNome = nomeVar.length;
+      if (tamanhoNome <= 1) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "O campo nome deve ter mais que um caractere"
+        finalizarAguardar();
+        return false;
+      }
+      var email_com_arroba = emailVar.indexOf('@');
+      var email_com_ponto = emailVar.indexOf('.');
+      if (email_com_arroba < 0 || email_com_ponto < 0) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "O campo email deve conter arroba e ponto"
+        finalizarAguardar();
+        return false;
+      }
+      var tamanhoSenha = senhaVar.length;
+      if (tamanhoSenha <= 6) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "(O campo senha deve conter mais que seis caracteres)"
+        finalizarAguardar();
+        return false;
+      }
+
+      if (senhaVar != confirmacaoSenhaVar) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "(O campo senha deve ser igual ao confirmar senha)"
+        finalizarAguardar();
+        return false;
+      }
+
+
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        dtNascServer: dtNascVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        personagemServer: personagemVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function listar() {
+    fetch("/personagens/listar", {
+      method: "GET",
+    })
+      .then(function (resposta) {
+        resposta.json().then((personagens) => {
+          personagens.forEach((personagem) => {
+            listaPersonagens.innerHTML += `<option value='${personagem.id}'>${personagem.nome}</option>`;
+          });
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloGuimarães | Dashboard</title>
+    <link rel="shortcut icon" href="../assets/icon/icon-Pag.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="./../css/dashboards.css">
+    <link rel="stylesheet" href="./../css/estilo.css" />
+
+    <script src="../js/sessao.js"></script>
+    <script src="../js/alerta.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onload="validarSessao(), listar(), listar2(), listar3(), obterDadosGrafico(), obterDadosGrafico2()">
+
+    <div class="janela">
+        <div class="header-left">
+            <img src="./../assets/imgs/logo.png" alt="">
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav-white" style="  margin-top: 20%;">
+                <a href="./cards.html">
+                    <h3 style="color: #FFDE59;">Dashboard</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./curiosidades.html">
+                    <h3>Curiosidades</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./quiz.html">
+                    <h3>Quiz</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="dash">
+        <div class="tituloDash">
+            <div class="linha"></div>
+            <h1>Dashboard</h1>
+        </div>
+        <div class="metricas">
+            <div class="metricasGeral">
+                <div class="box">
+                    <div class="boxInt">
+                        <h3>Personagem Favorito dos Usuários</h3>
+                        <h2><span id="PersonagemFav"></span></h2>
+                    </div>
+                </div >
+                <div id="graficos" style="height: 230px;">
+                </div>
+            </div>
+            <div class="metricasGeral">
+                <div class="box">
+                    <div class="boxInt">
+                        <h3>Faixa Etária dos Usuários</h3>
+                        <h2><span id="IdadeMenor"></span> - <span id="IdadeMaior"></span></h2>
+                    </div>
+                </div>
+                <div id="graficos2" style="height: 220px;">
+                </div>
+            </div>
+
+    
+        </div>
+    </div>
+
+
+    </div>
+
+</body>
+
+<script>
+    
+
+    function listar() {
+        fetch("/metricas/listar", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO listar()!")
+
+            if (resposta.ok) {
+                console.log("Função listar(): ")
+
+                resposta.json().then(function (resposta) {
+                    var dados = resposta[0];
+
+                    console.log(dados);
+                    PersonagemFav.innerHTML = dados.nome;
+                })
+            }
+        })
+
+    }
+
+    function listar2() {
+        fetch("/metricas/listar2", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO listar()!")
+
+            if (resposta.ok) {
+                console.log("Função listar2(): ")
+
+                resposta.json().then(function (resposta) {
+                    var dados2 = resposta[0];
+
+                    console.log(dados2);
+                    IdadeMenor.innerHTML = dados2.idadeMin;
+                })
+            }
+        })
+
+    }
+
+    function listar3() {
+        fetch("/metricas/listar3", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO listar()!")
+
+            if (resposta.ok) {
+                console.log("Função listar3(): ")
+
+                resposta.json().then(function (resposta) {
+                    var dados3 = resposta[0];
+
+                    console.log(dados3);
+                    IdadeMaior.innerHTML = dados3.idadeMax;
+                })
+            }
+        })
+
+    }
+
+    
+
+    function obterDadosGrafico() {
+        document.getElementById("graficos").innerHTML += `
+               
+        <canvas id="myChartCanvas" style="width: 500px; height: 20vh"></canvas>`;
+
+        fetch(`/medidas/pers/`, { 
+            method: "GET",
+            cache: 'no-store' ,
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta) {
+
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Personagens',
+                data: [],
+                fill: true,
+                borderColor: '#766FA1',
+                backgroundColor: '#766FA1',
+                tension: 0.1
+        }]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.Personagem);
+            dados.datasets[0].data.push(registro.Quantidade);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'bar',
+            data: dados,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChartCanvas`),
+            config
+        );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    function obterDadosGrafico2() {
+        document.getElementById("graficos2").innerHTML += `
+               
+        <canvas id="myChartCanvas2" style="width: 600px; height: 20vh"></canvas>`;
+
+        fetch(`/medidas/idade/`, { 
+            method: "GET",
+            cache: 'no-store' ,
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    // resposta.reverse();
+
+                    plotarGrafico2(resposta);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico2(resposta) {
+
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Faixa Etária',
+                data: [],
+                fill: true,
+                borderColor: '#766FA1',
+                backgroundColor: '#766FA1',
+                tension: 0.1
+        }]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.Idade);
+            dados.datasets[0].data.push(registro.Quantidades);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'bar',
+            data: dados,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChartCanvas2`),
+            config
+        );
+    }
+
+
+</script>
+
+</html>

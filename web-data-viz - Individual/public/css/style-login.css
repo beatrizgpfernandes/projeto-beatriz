@@ -1,0 +1,221 @@
+body {
+    display: flex;
+    background-color: #FEFDFC;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #FEFDFC;   
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #C7ADD1;    /* cor do scroll */
+    border-radius: 20px;       /* arredondamento da borda do scroll */
+    border: 3px solid #C7ADD1;  /* cor da borda do scroll */
+  }
+.IndexGeral {
+    flex-direction: column;
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: fixed;
+
+
+}
+
+.blocoNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #766FA1;
+    width: 100vw;
+    height: 9vh;
+}
+
+.blocoNavbar img {
+    width: 10vw;
+    height: 5vh;
+    margin-right: 200px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 70vw;
+    color: #FEFDFC;
+    font-size: larger;
+}
+
+.navbar li {
+    font-family: 'Questrial-Regular';
+}
+
+.navbar li:hover {
+    color: #FFDE59;
+}
+
+.navbar a{
+    font-family: 'Questrial-Regular';
+    text-decoration: none;
+    color: #FEFDFC;
+    transition: 5s;
+}
+
+
+.navbar button {
+    height: 23px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FEFDFC;
+    cursor: pointer;
+    font-family: 'Questrial-Regular';
+    font-size: medium;
+}
+
+.navbar button:hover {
+    background-color: #FFDE59;
+}
+
+@font-face {
+    font-family: 'Questrial-Regular';
+    src: url('../assets/imgs/Questrial-Regular.ttf');
+}
+
+.corpoLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/imgs/fundoCadastro.png');
+    background-size: cover;}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 23vw;
+    height: 67vh;
+    background-color: #766fa1da;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'FontFriends';
+    src: url('../assets/imgs/Gabriel\ Weiss\'\ Friends\ Font.TTF');
+}
+.box h1 {
+    font-family: "FontFriends" ;
+    color: #FFDE59;
+    margin-bottom: 17%;
+    margin-top: 10%;
+    font-size: 37px;
+
+}
+
+.box input {
+    background-color: #FEFDFC;
+    width: 17vw;
+    height: 5vh;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.box button {
+    background-color: #FFDE59;
+    width: 14vw;
+    height: 5vh;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    border-radius: 12px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box button:hover {
+    background-color: #ccc9e2;
+}
+
+.box p {
+    color: #FEFDFC;
+    font-family: 'Arial';
+    font-size: 85%;
+}
+
+.loading-div {
+    width: 50px;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  #div_erros_login {
+    display: none;
+    display: flex;
+    justify-content: center;
+    color: #571416;
+    width: 330px;
+    /* position: fixed; */
+    border-radius: 4px;
+    /* padding: 10px; */
+    text-align: center;
+    font-family: 'Questrial-Regular';
+  }
+
+  .alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card_erro {
+    display: none;
+    color: #571416;
+    width: 230px;
+    /* position: fixed; */
+    border-radius: 4px;
+    /* padding: 10px;
+    margin-right: 10%; */
+    text-align: center;
+    font-family: 'Questrial-Regular';
+    font-weight: bold;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 18px;
+  }
