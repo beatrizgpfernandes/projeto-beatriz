@@ -15,8 +15,7 @@ function listar() {
 
 function listar2() {
 
-    var instrucaoSql = `SELECT min(TIMESTAMPDIFF(YEAR, CAST(dtNasc AS UNSIGNED), NOW())) as idadeMin from usuario;
-    `;
+    var instrucaoSql = `SELECT min(TIMESTAMPDIFF(YEAR, dtNasc, CURDATE())) as idadeMin from usuario;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -25,7 +24,7 @@ function listar2() {
 
 function listar3() {
 
-    var instrucaoSql = `SELECT max(TIMESTAMPDIFF(YEAR, CAST(dtNasc AS UNSIGNED), NOW())) as idadeMax from usuario;
+    var instrucaoSql = `SELECT max(TIMESTAMPDIFF(YEAR, dtNasc, CURDATE())) as idadeMax from usuario;;
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);

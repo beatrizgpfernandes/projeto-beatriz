@@ -92,109 +92,101 @@
 
 <script>
   function cadastrar() {
-    aguardar();
+  aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = input_nome.value;
-    var dtNascVar = input_dtNasc.value;
-    var emailVar = input_email.value;
-    var senhaVar = input_senha.value;
-    var confirmacaoSenhaVar = input_confSenha.value;
-    var personagemVar = listaPersonagens.value
+  var nomeVar = input_nome.value;
+  var dtNascVar = input_dtNasc.value;
+  var emailVar = input_email.value;
+  var senhaVar = input_senha.value;
+  var confirmacaoSenhaVar = input_confSenha.value;
+  var personagemVar = listaPersonagens.value;
 
-    if (
-      nomeVar == "" ||
-      dtNascVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      personagemVar == ""
-    ) {
-
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "Todos os campos devem estar preenchidos";
-      finalizarAguardar();
-      return false;
-
-      var tamanhoNome = nomeVar.length;
-      if (tamanhoNome <= 1) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "O campo nome deve ter mais que um caractere"
-        finalizarAguardar();
-        return false;
-      }
-      var email_com_arroba = emailVar.indexOf('@');
-      var email_com_ponto = emailVar.indexOf('.');
-      if (email_com_arroba < 0 || email_com_ponto < 0) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "O campo email deve conter arroba e ponto"
-        finalizarAguardar();
-        return false;
-      }
-      var tamanhoSenha = senhaVar.length;
-      if (tamanhoSenha <= 6) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(O campo senha deve conter mais que seis caracteres)"
-        finalizarAguardar();
-        return false;
-      }
-
-      if (senhaVar != confirmacaoSenhaVar) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(O campo senha deve ser igual ao confirmar senha)"
-        finalizarAguardar();
-        return false;
-      }
-
-
-    } else {
-      setInterval(sumirMensagem, 5000);
-    }
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        dtNascServer: dtNascVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        personagemServer: personagemVar
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-          cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
-
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
-
+  if (
+    nomeVar == "" ||
+    dtNascVar == "" ||
+    emailVar == "" ||
+    senhaVar == "" ||
+    confirmacaoSenhaVar == "" ||
+    personagemVar == "Selecione um personagem"
+  ) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "Todos os campos devem estar preenchidos";
+    finalizarAguardar();
     return false;
   }
+
+  var tamanhoNome = nomeVar.length;
+  if (tamanhoNome <= 1) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "O campo nome deve ter mais que um caractere";
+    finalizarAguardar();
+    return false;
+  }
+
+  var email_com_arroba = emailVar.indexOf('@');
+  var email_com_ponto = emailVar.indexOf('.');
+  if (email_com_arroba < 0 || email_com_ponto < 0) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "O campo email deve conter arroba e ponto";
+    finalizarAguardar();
+    return false;
+  }
+
+  var tamanhoSenha = senhaVar.length;
+  if (tamanhoSenha <= 6) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "O campo senha deve conter mais que seis caracteres";
+    finalizarAguardar();
+    return false;
+  }
+
+  if (senhaVar != confirmacaoSenhaVar) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "O campo senha deve ser igual ao confirmar senha";
+    finalizarAguardar();
+    return false;
+  }
+
+  setInterval(sumirMensagem, 5000);
+
+  fetch("/usuarios/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nomeServer: nomeVar,
+      dtNascServer: dtNascVar,
+      emailServer: emailVar,
+      senhaServer: senhaVar,
+      personagemServer: personagemVar
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
+
+
+        setTimeout(() => {
+          window.location = "login.html";
+        }, "2000");
+
+        limparFormulario();
+        finalizarAguardar();
+      } else {
+        throw "Houve um erro ao tentar realizar o cadastro!";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      finalizarAguardar();
+    });
+
+  return false;
+}
 
   function listar() {
     fetch("/personagens/listar", {
