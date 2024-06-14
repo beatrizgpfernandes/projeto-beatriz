@@ -13,7 +13,7 @@ function pers() {
 
 function idade() {
 
-    var instrucaoSql = `SELECT TIMESTAMPDIFF(YEAR, CAST(dtNasc AS UNSIGNED), NOW()) as Idade, count(TIMESTAMPDIFF(YEAR, CAST(dtNasc AS UNSIGNED), NOW())) as Quantidades
+    var instrucaoSql = `SELECT TIMESTAMPDIFF(YEAR, dtNasc, NOW()) as Idade, count(TIMESTAMPDIFF(YEAR, dtNasc, NOW())) as Quantidades
     FROM usuario group by Idade order by Idade;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
